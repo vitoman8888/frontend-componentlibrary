@@ -1,10 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+export * from './components/Button';
+export * from './components/Logo';
+export * from './components/Nav';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { Button } from '@<your-npm-username>/up-design'

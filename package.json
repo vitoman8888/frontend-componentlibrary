@@ -1,7 +1,7 @@
 {
-  "name": "frontend-componentlibrary",
+  "name": "@vitoman66/up-design",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@fontsource/inconsolata": "^4.4.2",
     "@fontsource/major-mono-display": "^4.4.2",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -53,12 +53,34 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/preset-react": "^7.13.13",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "auto": "^10.29.2",
+    "cross-env": "^7.0.3",
     "prettier": "^2.3.0"
-  }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "description": "A component library to support the UP/Hill Design System",
+  "main": "dist/index.js",
+  "repository": "https://github.com/vitoman8888/frontend-componentlibrary.git",
+  "author": "Vito Vittore <vito.vittore@gmail.com>",
+  "license": "MIT"
 }
