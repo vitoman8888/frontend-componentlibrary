@@ -1,6 +1,6 @@
 {
   "name": "@vitoman66/up-design",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "dependencies": {
     "@fontsource/inconsolata": "^4.4.2",
